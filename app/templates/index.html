@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head><title>Movie Booking</title></head>
+<body>
+  <h1>Book a Movie</h1>
+  <form action="/book" method="post">
+    <input type="text" name="name" placeholder="Your Name" required><br>
+    <input type="text" name="movie" placeholder="Movie Name" required><br>
+    <input type="date" name="date" required><br>
+    <input type="text" name="seat" placeholder="Seat No" required><br>
+    <button type="submit">Book</button>
+  </form>
+
+  <h2>All Bookings</h2>
+  <ul>
+    {% for booking in bookings %}
+      <li>{{ booking.name }} - {{ booking.movie }} - {{ booking.date }} - Seat {{ booking.seat }}</li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
