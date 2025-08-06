@@ -6,10 +6,10 @@ on:
 
 env:
   AWS_REGION: us-east-1
-  ECR_REPOSITORY: movie-booking-app
-  CONTAINER_NAME: movie-booking-app
-  ECS_CLUSTER: movie-app-cluster
-  ECS_SERVICE: movie-app-service
+  ECR_REPOSITORY: movie-booking-dev-repo
+  CONTAINER_NAME: app
+  ECS_CLUSTER: movie-booking-dev-cluster
+  ECS_SERVICE: movie-booking-dev-service
 
 jobs:
   deploy:
